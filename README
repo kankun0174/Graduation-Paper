@@ -1,1 +1,24 @@
+# Piano Practice Support System
 
+## Overview
+音声認識、楽譜データ、DTW、脳波データを統合し、ピアノ演奏を小節単位で評価するシステム。
+
+## Features
+- MIDI / MusicXMLから参照演奏を解析
+- 音声ファイルから演奏音を自動採譜
+- DTWによる楽譜・演奏のアライメント
+- 小節単位でピッチ・リズム・テンポを採点
+- Mind Monitor CSVから脳波状態を推定
+- 演奏スコアと脳波状態を可視化
+
+## Architecture
+Input → Transcription → Alignment → Scoring → EEG Integration → Visualization
+
+## Tech Stack
+Python / Colab / pretty_midi / music21 / librosa / transkun / dtw-python / pandas / matplotlib
+
+## Limitations
+- 自動採譜精度に依存する
+- 脳波状態判定は簡易的
+- 録音と脳波の同期に手動入力が必要
+- 評価重みは経験的に設定
